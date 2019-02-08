@@ -22,6 +22,11 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+config :sentry,
+  dsn: "",
+  environment_name:           Mix.env(),
+  included_environments:      [:dev, :prod]
+
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 

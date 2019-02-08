@@ -1,5 +1,6 @@
 defmodule NoRouteTestingWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :no_route_testing
+  use Sentry.Phoenix.Endpoint
 
   socket "/socket", NoRouteTestingWeb.UserSocket,
     websocket: true,
